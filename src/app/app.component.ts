@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {User} from './address-card/user.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular6';
+  user: User;
+
+  constructor() {
+    this.user = new User();
+    this.user.name = 'Bobby Jones';
+    this.user.title = 'Software Engineer';
+    this.user.address = '111 Elm Street, Dallas, TX 75001';
+    this.user.phone = ['972-343-3433'];
+  }
 }
