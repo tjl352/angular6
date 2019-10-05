@@ -10,6 +10,8 @@ import {AddressCardComponent} from './address-card/address-card.component';
 import {TestComponent} from './test/test.component';
 import {ViewModule} from './view/view.module';
 import {ViewComponentComponent} from './view/view-component/view-component.component';
+import {TestService} from './test.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,8 +21,14 @@ import {ViewComponentComponent} from './view/view-component/view-component.compo
     AddressCardComponent,
     TestComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ViewModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ViewModule,
+    HttpClientModule
+  ],
+  providers: [TestService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
