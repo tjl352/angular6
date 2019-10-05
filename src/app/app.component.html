@@ -357,8 +357,11 @@
   <app-hello-world></app-hello-world>
   <app-date></app-date>
   <!-- <app-address-card name="Larry Centers"></app-address-card> -->
-  <!--[ ] signifies it is an object type = values-->
   <app-address-card [user]="user"></app-address-card>
+  <!-- <input type="text" [value]="inputText" > {{inputText}} -->
+  <!-- [ ], ( ), [( )] data flow: component -> template, template -> component, both ways--->
+  <input type="text" [(ngModel)]="inputText" > {{inputText}}
+  <app-view-component></app-view-component>
   <!-- Resources -->
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
