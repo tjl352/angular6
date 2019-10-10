@@ -1,0 +1,17 @@
+<h2>Login</h2>
+<p>
+  Username:
+  <input type="text" [(ngModel)]="username" />
+</p>
+<p>
+  Password:
+  <input type="password" [(ngModel)]="password" />
+</p>
+<p>
+  <button (click)="login()">Login</button>
+</p>
+<div *ngIf="result">
+  <p>Logged in as: {{ result.firstName }}</p>
+  <p>Username is: {{ username }}</p>
+  <p>Password is: {{ password }}</p>
+</div>

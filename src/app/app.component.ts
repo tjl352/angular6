@@ -1,5 +1,5 @@
 import {Component, Inject} from '@angular/core';
-import {User} from './address-card/user.model';
+import {User} from './test/address-card/user.model';
 import {TestService} from './test.service';
 import {InjectSetupWrapper} from '@angular/core/testing';
 import {ViewServiceService} from './view/view-service.service';
@@ -11,6 +11,7 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title: string = 'angular6';
   user: User;
   inputText: string = '';
   //private svc: TestService;
